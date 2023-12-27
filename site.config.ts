@@ -10,7 +10,7 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'Net\'s Portfolio',
-  domain: 'netkubb.com',
+  domain: 'www.netkubb.com',
   author: 'Waranont Chaosanguan',
 
   // open graph metadata (optional)
