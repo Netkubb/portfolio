@@ -60,3 +60,13 @@ body {
 ::-webkit-scrollbar-track {           
     background-color: var(--bg-color);
 }
+
+.logo{
+  height: 80% !important;
+  width: auto !important;
+
+}
+
+.logo:hover{
+  cursor: pointer;
+}
