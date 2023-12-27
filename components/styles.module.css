@@ -218,3 +218,13 @@
 .hidden {
   visibility: hidden;
 }
+
+.logo{
+  height: 80% !important;
+  width: auto !important;
+
+}
+
+.logo:hover{
+  cursor: pointer;
+}

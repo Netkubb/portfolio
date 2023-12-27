@@ -59,9 +59,9 @@ export const NotionPageHeader: React.FC<{
       <div className='notion-nav-header'>
         {
           hasMounted && isDarkMode ?
-          <Image alt="Netkubb" src={darkLogo} className='logo' onClick={() => location.href='/'} />
+          <Image alt="Netkubb" src={darkLogo} className={styles.logo} onClick={() => location.href='/'} />
           :
-          <Image alt="Netkubb" src={logo} className='logo' onClick={() => location.href='/'} />
+          <Image alt="Netkubb" src={logo} className={styles.logo} onClick={() => location.href='/'} />
         }
 
         <div className='notion-nav-header-rhs breadcrumbs'>
