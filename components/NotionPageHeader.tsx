@@ -10,10 +10,7 @@ import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
 
 import styles from './styles.module.css'
-import Image from 'next/image'
-
-import logo from './../public/logo.one.png.gif'  
-import darkLogo from './../public/logo-darkmode.one.crop.png.gif'  
+import Image from 'next/image'  
 
 const ToggleThemeButton = () => {
   const [hasMounted, setHasMounted] = React.useState(false)
@@ -59,9 +56,9 @@ export const NotionPageHeader: React.FC<{
       <div className='notion-nav-header'>
         {
           hasMounted && isDarkMode ?
-          <Image alt="Netkubb" src={darkLogo} className={styles.logo} onClick={() => location.href='/'} />
+          <Image alt="Netkubb" src="/logo-dark.webp" width={249} height={120} className={styles.logo} onClick={() => location.href='/'} />
           :
-          <Image alt="Netkubb" src={logo} className={styles.logo} onClick={() => location.href='/'} />
+          <Image alt="Netkubb" src="/logo-light.webp" width={253} height={144} className={styles.logo} onClick={() => location.href='/'} />
         }
 
         <div className='notion-nav-header-rhs breadcrumbs'>
