@@ -42,16 +42,23 @@ export const NotionPageHeader: React.FC<{
 }> = ({ block }) => {
   const { components, mapPageUrl } = useNotionContext()
   const { isDarkMode } = useDarkMode()
+  const [hasMounted, setHasMounted] = React.useState(false)
+  
+  React.useEffect(() => {
+    setHasMounted(true)
+  }, [])
+
 
   if (navigationStyle === 'default') {
     return <Header block={block} />
   }
 
+
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
         {
-          isDarkMode ?
+          hasMounted && isDarkMode ?
           <Image alt="Netkubb" src={darkLogo} className='logo' onClick={() => location.href='/'} />
           :
           <Image alt="Netkubb" src={logo} className='logo' onClick={() => location.href='/'} />
