@@ -28,6 +28,9 @@ import {
   posthogId
 } from '@/lib/config'
 
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 if (!isServer) {
   bootstrap()
 }
@@ -61,5 +64,9 @@ export default function App({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
-  return <Component {...pageProps} />
+  return <>
+    <Component {...pageProps} />
+    <Analytics />
+    <SpeedInsights />
+  </> 
 }
