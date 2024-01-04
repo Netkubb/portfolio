@@ -64,6 +64,7 @@ export const PageHead: React.FC<
         <>
           <meta name='twitter:card' content='summary_large_image' />
           <meta name='twitter:image' content={socialImageUrl} />
+          <meta data-n-head="ssr" data-hid="og:image:type" property="og:image:type" content="image/png"/>
           <meta property='og:image' content={socialImageUrl} />
         </>
       ) : (
